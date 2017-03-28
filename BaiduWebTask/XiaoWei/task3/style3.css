@@ -1,0 +1,50 @@
+*{margin: 0;padding: 0}
+
+/*整个web*/
+div{
+	border: 1px solid #999;
+}
+
+div#view{
+	margin: 20px;
+	background-color: #eeeeee;
+	position: relative;
+	padding-top: 20px;
+	min-height: 643px;	/*通过设定两侧栏中最长高度的min-height来保证父元素高度自适应*/
+}
+/*left*/
+div#left{
+	width: 200px;
+	position: absolute;
+	background-color: #FFFFFF;
+	padding: 20px 0 0 20px;
+	top: 20px;
+	left: 20px;
+}
+
+div#left img{
+	width: 80px;
+	height: 80px;
+}
+
+/*middle*/
+div#middle{
+	background-color: #FFFFFF;
+	text-indent: 2em;
+	margin: 0 160px 0 260px;
+}
+
+/*right*/
+div#right{
+	position:absolute;
+	top: 20px;
+	right: 20px;
+	width: 120px;
+	background-color: #FFFFFF;
+}
+
+div#right img{
+	width: 80px;
+	height: 80px;
+	margin: 20px;
+}
