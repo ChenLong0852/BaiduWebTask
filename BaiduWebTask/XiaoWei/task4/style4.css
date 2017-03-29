@@ -1,0 +1,37 @@
+*{margin: 0;padding: 0}
+
+div.square{
+	width: 400px;
+	height: 200px;
+	background: #ccc;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+
+div#circle1{
+	width: 50px;
+	height: 50px;
+	background: #fc0;
+	border-bottom-right-radius: 50px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+div#circle2{
+	width: 50px;
+	height: 50px;
+	background: #fc0;
+	border-top-left-radius: 50px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+div.square p{
+	color: green;
+	line-height: 200px;
+}
