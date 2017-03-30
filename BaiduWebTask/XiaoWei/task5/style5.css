@@ -1,0 +1,271 @@
+*{margin: 0;padding: 0;font-size: 14px;}
+/*整个网站view*/
+div.view{
+	background-color: #D0CCCC;
+}
+
+/*div.main{
+	position: relative;
+}*/
+
+/*导航hearder*/
+div#header{
+	width: 100%;
+	height: 70px;
+	background-color: #272626;
+	position: relative;
+}
+
+div#header>h1{
+	font-size: 32px;
+	margin-left: 60px;
+	color: pink;
+	float: left;
+	margin-top: 10px;
+}
+
+div#header>ul{
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	font-size: 20px;
+}
+
+div#header>ul li{
+	display: inline-block;
+	margin-right: 16px;
+	list-style: none;
+}
+
+div#header>ul li a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+/*文章主体main*/
+/*通用.text*/
+div.text{
+	float: left;
+	margin:20px 0 20px 20px;
+	width: 60%;
+	border: 2px outset gray;
+	background-color: white;
+	padding: 40px 30px;
+}
+
+h2.item1{
+	font-size: 28px;
+}
+
+h2.item2{
+	font-size: 20px;
+	color:gray;
+	margin-top: 16px;
+	margin-bottom: 0px;
+}
+
+span.writer,span.time{
+	font-size: 14px;
+	color: gray;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	display: inline-block;
+}
+
+div.text p{
+	text-indent: 2em;
+	line-height: 1.8em;
+}
+
+div.text a{
+	color: blue;
+}
+
+div.text a:hover{
+	color:pink;
+}
+
+/*第一篇.text*/
+div.text img{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	width: 80%;
+}
+
+/*第二篇列表.text*/
+div.text ul li{
+	list-style: none;
+	line-height: 26px;
+	text-indent: 2em;
+}
+
+/*第三篇.photo*/
+div.photo{
+	border: 1px solid gray;
+	text-align: center;
+	width:125px; 			/*宽度设为百分比会缩小图片*/
+	margin-top: 20px;
+	margin-left: 15px;
+	display: inline-block;
+}
+
+div.photo p{
+	text-indent: 0;
+	padding-top: 10px;
+}
+
+div.photo img{
+	width: 80%;
+}
+
+/*第四篇.text*/
+div.text ol li{
+	margin-left: 50px;
+	padding-bottom: 10px;
+}
+
+div.text table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+div.text table tbody th{
+	color: white;
+	background-color: black;
+}
+
+div.text table tbody th:first-child{
+	width: 40%;
+	text-align: left;
+}
+
+div.text table tbody th:nth-child(2){
+	width: 40%;
+	text-align: left;
+}
+
+div.text table tbody th:last-child{
+	width: 20%;
+	text-align: left;
+}
+
+div.text table td,div.text table th{
+	border: 1px solid gray;
+	padding-left: 5px;
+	height: 30px;
+}
+
+div.text table tr:last-child{
+	background-color: #C6C0C0;
+}
+
+/*最后一篇.sider*/
+div.sider{
+	line-height: 2em;
+	width: 350px;
+	float: right;
+	margin:20px 20px 20px 10px;
+	border: 2px outset gray;
+	background-color: white;
+	padding: 40px 30px;
+/*	position: absolute;
+	top: 70px;
+	right: 0;*/
+	/*绝对定位脱离文档流，使得窗口缩小侧栏会覆盖左侧*/
+}
+
+div.sider h2:first-child{
+	border-left: 3px solid gray;
+	height: 48px;
+	padding-top: 15px;
+	padding-left: 15px;
+	font-size: 18px;
+}
+
+div.sider h2:nth-child(2){
+	display: none;
+}
+
+div.email label:first-child{
+	width:30%;
+	text-align: right;
+	display: inline-block;
+}
+
+div.pass label:first-child{
+	width:30%;
+	text-align: right;
+	display: inline-block;
+}
+
+div.sex label:first-child{
+	width:30%;
+	text-align: right;
+	display: inline-block;
+}
+
+div.city label:first-child{
+	width:30%;
+	text-align: right;
+	display: inline-block;
+}
+
+div.habit label:first-child{
+	width:30%;
+	text-align: right;
+	display: inline-block;
+}
+
+div.resume label:first-child{
+	width:30%;
+	text-align: right;
+	display: inline-block;
+	float: left;
+	margin-top: 0;
+}
+
+div.sider input{
+	margin-left: 10px;
+}
+
+div.sider select{
+	margin-left: 10px;
+}
+
+p.tips{
+	font-size: 12px;
+	color: #BEBDBD;
+	text-indent: 35%;
+	line-height: 28px;
+}
+
+div.resume textarea{
+	width: 60%;
+	height: 120px;
+	margin-left: 10px;
+}
+
+#submit{
+	width: 100%;
+	height: 40px;
+	background-color: #46BCF7;
+	font-size: 24px;
+	color: white;
+	border-radius: 10px;
+}
+
+#submit:hover{
+	background-color: blue;
+}
+
+/*底部.footer*/
+div#footer{
+	clear: both;
+	width: 100%;
+	height: 70px;
+	background-color: black;
+	color: white;
+	text-align: center;
+	line-height: 70px;
+	font-size: 16px;
+}
