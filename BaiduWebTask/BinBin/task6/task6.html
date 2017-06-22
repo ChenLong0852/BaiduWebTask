@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>task6</title>
+	<link rel="stylesheet" type="text/css" href="style6.css">
+</head>
+<body>
+	<div>
+		<textarea class="imp" id="imp"></textarea>
+		<!-- <input type="text" id="imp" name="number"/> -->
+		<button id="leftin">左侧入</button>
+		<button id="leftout">左侧出</button>
+		<button id="rightin">右侧入</button>
+		<button id="rightout">右侧出</button>
+		<input type="text" id="search" name="number">
+		<button id="searchbutton">查询</button>
+		<ul id="result">
+			<li>10</li>
+			<li>3</li>
+			<li>7</li>
+			<li>12</li>
+			<li>11</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+	// 获取element
+	var num = document.getElementById("imp");
+	var leftin = document.getElementById("leftin");
+	var leftout = document.getElementById("leftout");
+	var rightin = document.getElementById("rightin");
+	var rightout = document.getElementById("rightout");
+	var res = document.getElementById("result");
+	// alert(num.nodeName);
+
+	// 左侧入
+	// function leftIn(){
+	// if (num.value =="") {
+	// 		alert("Please import a number!");
+	// 	} else if(!isNaN(num.value)){
+	// 		var creli = document.createElement('li');
+	// 		creli.innerHTML = num.value;
+	// 		res.insertBefore(creli,res.firstChild);
+	// 	}else{
+	// 		alert("This is not a number");
+	// 	}
+	// }
+
+	// // 右侧入
+	// function rightIn(){
+	// 	if (num.value =="") {
+	// 		alert("Please import a number!");
+	// 	} else if(!isNaN(num.value)){
+	// 		var creli = document.createElement('li');
+	// 		creli.innerHTML = num.value;
+	// 		res.appendChild(creli);
+	// 	}else{
+	// 		alert("This is not a number");
+	// 	}
+	// }
+
+	// // 左侧出
+	// var gList=res.getElementsByTagName("li");
+
+	// function leftOut(){
+	// 	var su=confirm("该值为："+gList[0].innerHTML+"，您确定删除吗？")
+	// 	if(su){
+	// 		res.removeChild(gList[0]);
+	// 	}
+	// }
+
+	// //右侧出
+	// function rightOut(){
+	// 	var su=confirm("该值为："+gList[gList.length-1].innerHTML+"，您确定删除吗？")
+	// 	if(su){
+	// 		res.removeChild(gList[gList.length-1]);
+	// 	}
+	// }
+
+	// /[^0-9a-zA-Z\u4e00-\u9fa5]/g
+	// 左侧插入
+	function leftIn(){
+		var text=num.value;
+		var texts=text.replace(/[^0-9a-zA-Z\u4e00-\u9fa5]/g,",");//匹配中英文数字，并将非匹配项转换为逗号
+		console.log(texts);
+		var texta=texts.split(",");//将以逗号分隔的字符串分隔为数组
+		console.log(texta);
+		for (var i = 0; i < texta.length; i++) {
+			var creli = document.createElement('li');
+			creli.innerHTML = texta[texta.length-1-i];//为保证正序输入的字符串也正序输出，同时for循环以0开始，所以多减1
+			res.insertBefore(creli,res.firstChild);
+		}
+	}
+
+	
+	function leftOut(){
+		var gList=res.getElementsByTagName("li");
+		var su=confirm("该值为："+gList[0].innerHTML+"，您确定删除吗？")
+		if(su){
+			res.removeChild(gList[0]);
+		}
+	}
+
+	function rightIn(){
+		var text=num.value;
+		var texts=text.replace(/[^0-9a-zA-Z\u4e00-\u9fa5]/g,",");//匹配中英文数字，并将非匹配项转换为逗号
+		console.log(texts);
+		var texta=texts.split(",");//将以逗号分隔的字符串分隔为数组
+		console.log(texta);
+		for (var i = 0; i < texta.length; i++) {
+			var creli = document.createElement('li');
+			creli.innerHTML = texta[i];
+			res.appendChild(creli);
+		}
+	}
+
+	function rightOut(){
+		var gList=res.getElementsByTagName("li");
+		var su=confirm("该值为："+gList[gList.length-1].innerHTML+"，您确定删除吗？")
+		if(su){
+			res.removeChild(gList[gList.length-1]);
+		}
+	}
+
+	//查询
+	function search(){
+		var sear=document.getElementById("search");
+		var gList=res.getElementsByTagName("li");
+		if(sear.value==""){
+			alert("请输入有效字符！");
+			return;//出口
+		}
+		for (var i = 0; i < gList.length; i++) {
+			gLi=gList[i].innerHTML;
+			if(gLi.indexOf(sear.value)>-1){
+				gList[i].style.backgroundColor="#F06060";
+			}else{
+				gList[i].style.backgroundColor="#29A0FC";//保证在第二次查询时取消掉上一次查询结果
+			}
+		}
+	}
+
+	leftin.onclick =function(){leftIn();};
+	leftout.onclick =function(){leftOut();};
+	rightin.onclick =function(){rightIn();};
+	rightout.onclick =function(){rightOut();};
+	searchbutton.onclick =function(){search()};
+
+	</script>
+</body>
+</html>

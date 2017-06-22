@@ -1,0 +1,42 @@
+div,ul,li{
+	padding: 0;
+	margin: 0;
+}
+
+div{
+	width: 1020px;
+	margin: 10px auto;
+}
+
+ul{
+	list-style: none;
+	display: flex;
+	border: 1px solid red;
+	margin-top: 20px;
+	justify-content: flex-start;
+	align-items: flex-end;
+	flex-wrap: wrap;
+}
+
+li{
+	/*display: block;*/
+	margin-right: 5px;
+	background-color: #29A0FC;
+	color: #582A2A;
+	width: 12px;
+	/*height: 50px;*/
+	font-size: 11px;
+}
+
+#imp{
+	width: 400px;
+	height: 26px;
+}
+
+input{
+	font-size: 20px;
+}
+
+#result{
+	height: 600px;
+}

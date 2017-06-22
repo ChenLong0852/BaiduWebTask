@@ -34,11 +34,18 @@
  * 读取id为source的列表，获取其中城市名字及城市对应的空气质量
  * 返回一个数组，格式见函数中示例
  */
-function getData() {
-  /*
-  coding here
-  */
+var gul=document.getElementById("source");
+var gli=gul.getElementsByTagName("li");
+var data=new Array();
+// console.log(gli.length);
 
+function getData() {
+  for (var i = 0; i < gli.length; i++) {
+    var city=gli[i].innerText.slice(0,2);
+    var val=gli[i].lastChild.innerHTML;
+    data[i]=[city,val];
+    // console.log(data[i]);
+  }
   /*
   data = [
     ["北京", 90],
@@ -46,10 +53,14 @@ function getData() {
     ……
   ]
   */
-
   return data;
-
 }
+// document.write("1"+"<br/>");
+// for (var j = 0; j < data.length; j++) {
+//   console.log(data[j]);
+// }
+// document.write("2");
+// 这里的1和2都可以输出，就是中间的数组在控制台不能输出？
 
 /**
  * sortAqiData
@@ -57,7 +68,11 @@ function getData() {
  * 返回一个排序后的数组
  */
 function sortAqiData(data) {
-
+  data.sort(function(x,y){
+    return x[1]-y[1];
+  });
+  data.reverse();
+  return data;
 }
 
 /**
@@ -66,7 +81,12 @@ function sortAqiData(data) {
  * 格式见ul中的注释的部分
  */
 function render(data) {
-
+  var glist=document.getElementById("resort");
+  for(var m=0;m<data.length;m++){
+    var newnode=document.createElement("li");
+    newnode.innerHTML="第"+(m+1)+"名："+data[m][0]+"，得分："+data[m][1];
+    glist.appendChild(newnode);
+  };
 }
 
 function btnHandle() {
@@ -76,9 +96,9 @@ function btnHandle() {
 }
 
 function init() {
-
   // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
-
+  var btn = document.getElementById('sort-btn');
+  btn.onclick = btnHandle;
 }
 
 init();

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>task5</title>
+	<link rel="stylesheet" type="text/css" href="style5.css">
+</head>
+<body>
+	<div>
+		<input type="text" id="imp" name="number"/>
+		<button id="leftin">左侧入</button>
+		<button id="leftout">左侧出</button>
+		<button id="rightin">右侧入</button>
+		<button id="rightout">右侧出</button>
+		<button id="sort">排序</button>
+		<ul id="result">
+			<li>60</li>
+			<li>13</li>
+			<li>57</li>
+			<li>52</li>
+			<li>11</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+	// 获取element
+	var num = document.getElementById("imp");
+	var leftin = document.getElementById("leftin");
+	var leftout = document.getElementById("leftout");
+	var rightin = document.getElementById("rightin");
+	var rightout = document.getElementById("rightout");
+	var res = document.getElementById("result");
+	var sor = document.getElementById("sort");
+	// alert(num.nodeName);
+	var gList=res.getElementsByTagName("li");
+
+	function Hei(){
+		var len=gList.length;
+		for (var i = 0; i < gList.length; i++) {
+			gList[i].style.height=parseInt(gList[i].innerHTML)*6+"px";
+		}
+	};
+	Hei();
+	// 左侧入
+	function LeftIn(){
+		var len=gList.length;
+		console.log(len);
+		if(len>60){
+			alert("There are too many items.");
+			return;
+		}
+		if (num.value =="" || num.value==" ") {
+			alert("Please import a Number!");
+		} else if(isNaN(num.value)){
+			alert("This is not a Number");
+		} else if(num.value<10||num.value>100){
+			alert("This is not in 10~100!");
+		}
+		else{
+			var creli = document.createElement('li');
+			creli.style.height = num.value*6+"px";
+			creli.innerHTML = num.value;
+			res.insertBefore(creli,res.firstChild);
+			len++;
+		}
+	}
+
+	// 右侧入
+	function RightIn(){
+		var len=gList.length;
+		if(len>15){
+			alert("There are too many items.");
+			return;
+		}
+		if (num.value =="" || num.value==" ") {
+			alert("Please import a Number!");
+		} else if(isNaN(num.value)){
+			alert("This is not a Number");
+		} else if(num.value<10||num.value>100){
+			alert("This is not in 10~100!");
+		}
+		else{
+			var creli = document.createElement('li');
+			creli.style.height = num.value*6+"px";
+			creli.innerHTML = num.value;
+			res.appendChild(creli);
+			len++;
+		}
+	}
+
+	// 左侧出
+
+	function LeftOut(){
+		var su=confirm("该值为："+gList[0].innerHTML+"，您确定删除吗？")
+		if(su){
+			res.removeChild(gList[0]);
+		}
+	}
+
+	//右侧出
+	function RightOut(){
+		var su=confirm("该值为："+gList[gList.length-1].innerHTML+"，您确定删除吗？")
+		if(su){
+			res.removeChild(gList[gList.length-1]);
+		}
+	}
+
+	function SortArr(){
+		var len=gList.length;
+		var lis = new Array();
+		for(var j=0; j<len;j++){
+			lis[j] = new Array();
+			lis[j][0]=parseInt(gList[j].style.height);
+			lis[j][1]=gList[j].innerHTML;
+			// dom.style.width这种方式只能取到行内属性  也就是写在HTML中的style属性，而不是css属性
+			// gList[j].style.height=lis[j]+"px";
+		}
+		lis.sort(function(x,y){
+			return x[0]-y[0];
+		});
+		for (var k = 0; k < len; k++) {
+			gList[k].style.height=parseInt(lis[k][0])+"px";
+			gList[k].innerHTML=lis[k][1];
+			console.log(parseInt(lis[k]));
+		}
+	}
+
+	leftin.onclick =function(){LeftIn();};
+	leftout.onclick =function(){LeftOut();};
+	rightin.onclick =function(){RightIn();};
+	rightout.onclick =function(){RightOut();};
+	sor.onclick=function(){SortArr();};
+	</script>
+</body>
+</html>
