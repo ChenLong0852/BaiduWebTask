@@ -1,0 +1,53 @@
+h1,h2,h3,h4,h5,h6,p,div,span,
+img,ul,li,ol,html,body,a,dl, dt, dd,
+header,main,footer,nav,section,address,
+table, caption, tbody, tfoot, thead, tr, th, td{
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	/*background: transparent;*/
+	font-family: 微软雅黑;
+}
+div{
+	background: #fff;
+}
+
+.box,.bx{
+	border: 1px solid #000000;
+	padding: 20px;
+}
+
+.bx{
+	margin: 40px;
+}
+
+.box{
+	width: 48%;
+	display: inline-block;
+}
+
+.button{
+	text-align: center;
+}
+
+button{
+	width: 150px;
+	height: 50px;
+	font-size: 25px;
+	border-radius: 5px;
+	cursor: pointer;
+	border: 1px solid #2576A8;
+	background: -webkit-gradient(linear,left top, left bottom,from(#ABCDFF),to(#0867F4));
+	/*background: -webkit-linear-gradient(top,#ABCDFF,#0867F4);*/
+	background: linear-gradient(top,#ABCDFF,#0867F4);
+	background: -ms-linear-gradient(top,#ABCDFF,#0867F4);
+}
+
+button:hover,button:active{
+	/*background: #030303;*/
+	color: #F1E6E6;
+	text-shadow: 1px 1px 0.5px #22629B;
+}
+
+

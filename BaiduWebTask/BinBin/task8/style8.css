@@ -1,0 +1,71 @@
+h1,h2,h3,h4,h5,h6,p,div,span,input,
+img,ul,li,ol,html,body,a,dl, dt, dd,
+header,main,footer,nav,section,address,
+table, caption, tbody, tfoot, thead, tr, th, td{
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	/*background: transparent;*/
+	font-family: 微软雅黑;
+}
+#root{
+	overflow: hidden;
+}
+
+div{
+	background: #fff;
+	border: 1px solid #000000;
+	padding: 10px;
+	float: left;
+	margin: 20px;
+}
+
+nav{
+	text-align: center;
+}
+
+button{
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 22px;
+	border-radius: 10px;
+	border: 0 solid #A99B9B;
+	color: #7339EC;
+	background: -webkit-gradient(linear,left top, left bottom,from(#FCACC6),to(#A75757));
+	background: linear-gradient(top,#FCACC6,#A75757);
+}
+
+button:hover,button:active{
+	color: #fff;
+	background: #020202;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+#result{
+	border: 1px solid #B4FF00;
+	background: #B86E6E;
+	width: 720px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 18px;
+	margin: 15px auto;
+	color: #FFF;
+}
+
+#result:hover{
+	background: #000;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+#valu{
+	height: 46px;
+	line-height: 46px;
+	font-size: 22px;
+}
+#valu:hover,#valu:active,#valu:focus{
+	background: #FEC5EA;
+}
