@@ -5,7 +5,10 @@ var rot=document.getElementById("root");
 var dfs=document.getElementById("dfs");
 var bfs=document.getElementById("bfs");
 var sea=document.getElementById("search");
-var res=document.getElementById("result");
+
+var del=document.getElementById("del");
+var ins=document.getElementById("insert");
+
 var movement,n;//定时器和计数器
 // var m=1;//广度优先中定义的一个记录数组的索引值
 
@@ -24,26 +27,6 @@ function dfsOrder(root){
 		dfsOrder(root.children[i]);
 	}
 }
-
-// 广度优先，遍历节点深度失败，遇到无子节点的就会出错
-// function bfsOrder(root){
-// 	if(root){
-// 		for(var i=0,len=root.children.length;i<len;i++){
-// 			var nodes={};
-// 			nodes.name=root.children[i];
-// 			nodes.value=txt(root.children[i]);
-// 			data.push(nodes);
-// 		}
-// 	// console.log(m);
-// 	}
-// 	root=data[m].name;
-// 	m++;
-// 	if(root.firstElementChild==null){
-// 		m++;
-// 		bfsOrder(root.firstElementChild);
-// 	}
-// 	bfsOrder(root.firstElementChild);
-// }
 
 function bfsOrder(root){
 	if(root!=null){
@@ -81,17 +64,6 @@ function sear(color){
 			data[i].name.style.background=color;
 		}else{
 			data[i].name.style.background="#fff";
-		}
-	}
-}
-
-function showtxt(){
-	if(data.length!=0){
-		var text=data[0].value;
-		var len=data.length;
-		for(var i=1;i<len;i++){
-			text=text+"+"+data[i].value;
-			res.innerText=text;
 		}
 	}
 }
@@ -146,26 +118,120 @@ function change(color){
 	show();
 }
 
+//task9
+//forEach参考链接：https://stackoverflow.com/questions/31534066/javascript-object-foreach-is-not-a-function
+// 单击事件
+function cli(){
+	var totale=document.getElementsByClassName("box");
+	var totalele=Array.prototype.slice.call(totale);
+	totalele.forEach(function(e){//document.getElementsByClassName获取的是一个类数组，并没有forEach方法，
+		e.onclick=function(e){
+			e.preventDefault();//阻止元素鼠标点击事件的默认行为;
+			e.stopPropagation();//防止事件冒泡;
+			if(this.classList.contains("click")){
+				this.classList.remove("click");
+			}else{
+				this.classList.add("click");
+			}
+		}
+	});
+}
+
+//html5有一个classList API
+//提供add,remove,contains等多个方法
+
+//增加类
+// function addC(element,class){
+// 	if(!element)return;
+// 	if(!element.className){
+// 		element.className=class;
+// 	}else{
+// 		var preClass=element.className;
+// 		element.className=preClass+" "+class;
+// 	}
+// }
+
+//删除类
+// function removeC(element,class){
+// 	if(element.className.indexOf(class)!==-1){
+// 		var preClass=element.className;
+// 		preClass = preClass.replace(value, '');
+// 		element.className = preClass.trim();
+// 	}
+// }
+
+// 删除DOM节点
+var domNodes=[]; //定义单击节点
+// 先遍历，存储有“click”类的节点
+function domOrder(root){
+	if(root.classList.contains("click")){
+		domNodes.push(root);
+	}
+	for(var i=0,len=root.children.length;i<len;i++){
+		arguments.callee(root.children[i]);
+	}
+}
+
+function domRemove(){
+	domNodes=[];//保证多次可以多次清除
+	domOrder(rot);
+	if(domNodes.length==0){
+		alert("您还未选中节点");
+	}
+	for(var i=0,len=domNodes.length;i<len;i++){
+		console.log(domNodes);
+		if(domNodes[i]!=null){
+			domNodes[i].parentNode.removeChild(domNodes[i]);
+		}else{
+			continue;
+		}
+	}
+}
+
+//插入节点
+function domInsert(){
+	var valu=document.getElementById("valu1");
+	domNodes=[];
+	domOrder(rot);
+	if(domNodes.length==1){
+		var cdiv=document.createElement("div");
+		cdiv.innerHTML=valu.value;
+		cdiv.setAttribute("class","box");
+		domNodes[0].appendChild(cdiv);
+	}else if(domNodes.length==0){
+		alert("您未选中节点！")
+	}else{
+		alert("您选中了"+domNodes.length+"个节点！")
+	}
+	cli();
+}
+
 window.onload=function(){
 	// 绑定事件
 	dfs.onclick=function(){
 		check();
 		dfsOrder(rot);
-		// console.log(data.length);
 		change("red");
-		showtxt();
 	}
 
 	bfs.onclick=function(){
 		check();
 		bfsOrder(rot);
 		change("blue");
-		showtxt();
-		// console.log(data);
 	}
 
 	sea.onclick=function(){
 		sear("yellow");
+	}
+
+	cli();
+
+	del.onclick=function(){
+		domRemove();
+	}
+
+	ins.onclick=function(){
+		domInsert();
 	}
 }
 

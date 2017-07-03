@@ -25,6 +25,10 @@ nav{
 	text-align: center;
 }
 
+.second{
+	margin-top: 10px;
+}
+
 button{
 	width: 150px;
 	height: 50px;
@@ -44,28 +48,19 @@ button:hover,button:active{
 	transition: all 0.5s;
 }
 
-#result{
-	border: 1px solid #B4FF00;
-	background: #B86E6E;
-	/*width: 720px;*/
-	height: 50px;
-	line-height: 50px;
-	font-size: 18px;
-	margin: 15px auto;
-	color: #FFF;
-}
-
-#result:hover{
-	background: #000;
-	-webkit-transition: all 0.5s;
-	transition: all 0.5s;
-}
-
-#valu{
+.valu{
 	height: 46px;
 	line-height: 46px;
 	font-size: 22px;
 }
-#valu:hover,#valu:active,#valu:focus{
+.valu:hover,.valu:active,.valu:focus{
 	background: #FEC5EA;
+}
+
+.box{
+	cursor: pointer;
+}
+
+.click{
+	background: #EF8484;
 }
