@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>task3</title>
+	<link rel="stylesheet" type="text/css" href="style3.css">
+</head>
+<body>
+	<form>
+		<div>
+			<div><!-- 保证与下面的选择框左对齐 -->
+				<input type="radio" name="student" id="student" checked="checked">
+				<label for="student">在校</label>
+				<input type="radio" name="student" id="noStudent">
+				<label for="noStudent">非在校</label>
+			</div>
+		</div>
+		<div>
+			<div id="study">
+				<label for="city">城市</label>
+				<select id="city" name="city">
+					<option value="beijing">北京</option>
+					<option value="shanghai">上海</option>
+					<option value="guangzhou">广州</option>
+					<option value="chengdu">成都</option>
+					<option value="guizhou">贵州</option>
+				</select>
+				<label for="university">学校</label>
+				<select id="university" name="university">
+					<option>北京人大学</option>
+					<option>清华大学</option>
+					<option>北航</option>
+				</select>
+			</div>
+			<div id="nostudy">
+				<label for="workPlace">工作地点：</label>
+				<input type="text" name="workPlace" id="workPlace">
+			</div>
+		</div>
+	</form>
+	<script type="text/javascript" src="task3.js"></script>
+</body>
+</html>

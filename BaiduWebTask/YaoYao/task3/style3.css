@@ -1,0 +1,42 @@
+h1,h2,h3,h4,h5,h6,p,div,span,input,
+img,ul,li,ol,html,body,a,dl, dt, dd,
+header,main,footer,nav,section,address,button,
+table, caption, tbody, tfoot, thead, tr, th, td{
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	/*background: transparent;*/
+	font-family: 微软雅黑;
+}
+
+form{
+	border: 1px solid #BFB9B9;
+	width: 60%;
+	margin: 0 auto;
+}
+
+div{
+	width: 80%;
+	margin: 20px auto;
+	padding: 10px;
+	font-size: 18px;
+}
+
+[for="university"]{
+	margin-left: 40px;
+}
+
+select{
+	margin-left: 10px;
+	font-size: 18px;
+}
+
+option,input{
+	line-height: 18px;
+	font-size: 18px;
+}
+
+#nostudy{
+	display: none;
+}

@@ -1,0 +1,60 @@
+h1,h2,h3,h4,h5,h6,p,div,span,input,
+img,ul,li,ol,html,body,a,dl, dt, dd,
+header,main,footer,nav,section,address,button,
+table, caption, tbody, tfoot, thead, tr, th, td{
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	/*background: transparent;*/
+	font-family: 微软雅黑;
+}
+
+form>fieldset{
+	width: 70%;
+	margin: 20px auto;
+	font-size: 20px;
+}
+
+form>fieldset>label{
+	display: inline-block;
+	width: 20%;
+	text-indent: 8%;
+	margin-bottom: 30px;
+}
+
+form>fieldset>input{
+	width: 40%;
+	font-size: 20px;
+	border-radius: 5px;
+	border: 2px solid #AFADAD;
+}
+
+form>fieldset>button{
+	position: relative;
+	left: 28%;
+	font-size: 18px;
+	padding: 6px 12px;
+	border-radius: 4px;
+	border: 2px solid #987A7A;
+}
+
+form>fieldset>button:hover{
+	background: #F55C5C;
+	color: #FFFFFF;
+	transition: all 0.2s;
+}
+
+.warning{
+	font-size: 16px;
+	color: #ADA6A6;
+	margin-left: 20px;
+}
+
+.passin{
+	border: 2px solid #65ED47;
+}
+
+.nopain{
+	border: 2px solid #F72626;
+}

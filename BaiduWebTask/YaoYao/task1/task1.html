@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>task1</title>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>Html5</legend>
+			<label class="labe" for="name">Name<span>*</span>：</label>
+			<input class="inpu" type="text" id="name" placeholder="John Conner" required="required"><br />
+			<label class="labe" for="telephone">Phone：</label>
+			<input class="inpu" type="tel" id="telephone" placeholder="11位手机号码" oninput="valid(this)"><br />
+			<label class="labe" for="email">E-mail<span>*</span>：</label>
+			<input class="inpu" type="email" id="email" required pattern="^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+" placeholder="someone@web.com">
+			<input id="confirm" type="submit" name="submit" value="确认">
+		</fieldset>
+	</form>
+	<fieldset id="formtwo">
+		<legend>Js</legend>
+		<label class="labe" for="nam">Name<span>*</span>：</label>
+		<input class="inpu" type="text" id="nam" placeholder="John Conner">
+		<button class="test" id="butone">验证</button>
+<!-- 		<br />
+		<label class="labe" for="phone">Phone：</label>
+		<input class="inpu" type="text" id="phone" placeholder="xxx-xxxx-xxxx">
+		<button class="test" id="buttwo">验证</button>
+		<br />
+		<label class="labe" for="mail">E-mail<span>*</span>：</label>
+		<input class="inpu" type="text" id="mail">
+		<button class="test" id="butthr">验证</button> -->
+		<span id="wrinfor">请输入4~16位字符</span>
+	</fieldset>
+	<script type="text/javascript" src="task1.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+h1,h2,h3,h4,h5,h6,p,div,span,input,
+img,ul,li,ol,html,body,a,dl, dt, dd,
+header,main,footer,nav,section,address,button,
+table, caption, tbody, tfoot, thead, tr, th, td{
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	/*background: transparent;*/
+	font-family: 微软雅黑;
+}
+
+fieldset{
+	width: 60%;
+	margin: 20px auto 50px;
+
+}
+
+.labe{
+	display: inline-block;
+	width: 20%;
+	text-indent: 5%;
+	margin-bottom: 4%;
+	font-size: 18px;
+}
+
+.inpu{
+	width: 30%;
+	border-radius: 4px;
+	font-size: 24px;
+}
+
+.inpu:focus{
+	background: #eaeaea;
+}
+
+.test{
+	font-size: 24px;
+	padding: 1px 5px 1px 5px;
+	border-radius: 3px;
+	margin-left: 2%;
+	border: none;
+	background: #67A2FA;
+	color: #FFFFFF;
+}
+
+.test:hover{
+	background: #FD84D2;
+	color: #4E4E4E;
+	transition: all 0.5s;
+}
+
+#confirm{
+	display: block;
+	margin: 0 auto;
+	padding: 3px;
+	font-size: 24px;
+}
+/*方便一会定位错误信息*/
+#formtwo{
+	position: relative;
+}
+
+#wrinfor{
+	font-size: 14px;
+	position: absolute;
+	top: 58px;
+	left: 22%;
+	color: #CAC3C3;
+}
+
+.passin{
+	border: 2px solid #65ED47;
+}
+
+/*.passsp{
+	color: #47F334;
+}*/
+
+.nopain{
+	border: 2px solid #F72626;
+}
+
+/*.nopasp{
+	color: #F82323;
+}*/
