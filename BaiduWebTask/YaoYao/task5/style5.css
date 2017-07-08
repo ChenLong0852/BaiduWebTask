@@ -1,0 +1,54 @@
+h1,h2,h3,h4,h5,h6,p,div,span,input,
+img,ul,li,ol,html,body,a,dl, dt, dd,
+header,main,footer,nav,section,address,button,
+table, caption, tbody, tfoot, thead, tr, th, td{
+	padding: 0;
+	margin: 0;
+/*	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;*/
+	/*background: transparent;*/
+	font-family: 微软雅黑;
+}
+
+.box{
+	margin-top: 20px;
+}
+
+#boom{
+	margin: 0 auto;
+	border-collapse: collapse;
+	border: 2px solid #030303;
+}
+
+#boom th{
+	line-height: 40px;
+}
+
+#boom th,#boom td{
+	width: 40px;
+	height: 40px;
+	border: 1px solid #A9A1A1;
+}
+
+.button{
+	margin: 0 auto;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.button button{
+	padding: 3px 6px;
+	margin-left: 10px;
+	font-size: 14px;
+}
+
+.body{
+	background-color: red;
+}
+
+#head{
+	background-color: blue;
+	width: 40px;
+	height: 10px;
+	margin-top:-20px;
+}
