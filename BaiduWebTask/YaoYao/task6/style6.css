@@ -1,0 +1,103 @@
+h1,h2,h3,h4,h5,h6,p,div,span,input,
+img,ul,li,ol,html,body,a,dl, dt, dd,
+header,main,footer,nav,section,address,button,
+table, caption, tbody, tfoot, thead, tr, th, td{
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	/*background: transparent;*/
+	font-family: 微软雅黑;
+}
+
+.content>button{
+	display: block;
+	font-size: 18px;
+	margin: 15px auto;
+	padding: 3px 6px;
+}
+
+p{
+	text-align: center;
+}
+
+#popBox{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	background: rgba(0,0,0,0.1);
+	/*background-color: #A7A2A2;*/
+	display: none;
+}
+
+#popUp{
+	position:absolute;
+	left:0px;
+	top:0px;
+	right:0px;
+	bottom:0px;
+	margin:auto;
+	width: 400px;
+	height: 200px;
+	border: 1px solid #aaaaaa;
+	z-index: 9999;
+}
+
+#popTitle{
+	height: 50px;
+	background: #695858;
+	font-size: 18px;
+	border: 1px solid #aaaaaa;
+	color: #F8F1F1;
+	text-indent: 15px;
+	line-height: 50px;
+}
+
+#popContent{
+	height: 150px;
+	background-color: #FFFFFF;
+	font-size: 14px;
+	position: relative;
+	border: 1px solid #aaaaaa;
+}
+
+#popContent p{
+	font-size: 16px;
+	text-align: left;
+	text-indent: 32px;
+	line-height: 46px;
+}
+
+#popButton{
+	position: absolute;
+	right: 20px;
+	bottom: 15px;
+}
+
+#popButton button{
+	font-size: 18px;
+	margin-left: 18px;
+	padding: 3px 6px;
+	border: 1px solid #ECE6E6;
+	background: #695858;
+	color: #FFFFFF;
+	border:1px solid #aaaaaa;
+}
+
+#popButton button:hover{
+	background: #F46060;
+	color: #020202;
+	transition: all 0.5s;
+}
+
+/*.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}*/
