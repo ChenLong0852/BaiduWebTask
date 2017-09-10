@@ -83,6 +83,8 @@ main ul li a:hover{
 
 main ul li a:visited{
 	color: #7C0C0C;
+/*	在firefox里会先跟随hover变色再突然变成被访问过的颜色
+	在chrome里hover颜色不变，只是改变文字大小*/
 }
 
 footer{
