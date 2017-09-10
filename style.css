@@ -78,7 +78,10 @@ main ul li a{
 main ul li a:hover{
 	color: #E65A5A;
 	font-size: 2rem;
-	transition: 0.3s all;
+	transition: all 0.2s;
+/*	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
+	    	 transform适用于：所有块级元素及某些内联元素*/
 }
 
 main ul li a:visited{
