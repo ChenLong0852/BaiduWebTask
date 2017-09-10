@@ -1,0 +1,97 @@
+h1,h2,h3,h4,h5,h6,p,div,span,input,
+img,ul,li,ol,html,body,a,dl, dt, dd,
+header,main,footer,nav,section,address,button,figure,figcaption,
+table, caption, tbody, tfoot, thead, tr, th, td{
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	background: transparent;
+	font-family: 微软雅黑;
+	font-size: 10px;
+	/*border: 1px solid red;*/
+}
+
+body{
+	background-color: #f5f5d5;
+}
+
+a{
+	text-decoration: none;
+	color: #223472;
+}
+
+header{
+	width: 70%;
+	margin: 2rem auto 1rem;
+}
+
+header h2{
+	border-bottom: 1px solid #D8D6D6;
+	font-size: 3rem;
+	padding-bottom: 1rem;
+	color: orange;
+}
+
+header p{
+	font-size: 1.4rem;
+	color: #B1AFAF;
+	text-indent: 4rem;
+}
+
+
+main{
+	width: 70%;
+	margin: 0 auto;
+}
+
+main h2{
+	border-bottom: 1px solid #D8D6D6;
+	font-size: 3rem;
+	padding-bottom: 1rem;
+	margin:5rem 0 3rem 0;
+}
+
+main h3{
+	border-bottom: 1px solid #D8D6D6;
+	font-size: 2.8rem;
+	padding-bottom: 1rem;
+	font-weight: normal;
+	margin: 3rem 0 2rem 0;
+}
+
+main ul{
+	list-style-type: square;
+	margin-left: 4rem;
+}
+
+main ul li{
+	height: 3rem;
+	line-height: 3rem;
+}
+
+main ul li a{
+	color: #223472;
+	font-size: 1.8rem;
+}
+
+main ul li a:hover{
+	color: #E65A5A;
+	font-size: 2rem;
+	transition: 0.3s all;
+}
+
+main ul li a:visited{
+	color: #7C0C0C;
+}
+
+footer{
+	width: 70%;
+	margin: 0 auto;
+	color: orange;
+	font-size: 3rem;
+	text-align: center;
+	border-top: 1px solid #D8D6D6;
+	padding: 3rem;
+	margin-top: 5rem;
+}
